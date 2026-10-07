@@ -189,5 +189,5 @@ Real problems encountered during the build and how they were solved:
 
 ## 👤 Author
 
-**Your Name** · Aspiring Systems / Security Administrator
-🔗 [LinkedIn](https://linkedin.com/in/your-profile) · 📧 your.email@example.com
+**Abdiqani Ahmed** · Aspiring Systems / Security Administrator
+🔗 [LinkedIn](https://www.linkedin.com/in/abdiqani-hussein-ahmed-8853a1313/?isSelfProfile=true) · 📧 abdiqanih00@hotmail.com
