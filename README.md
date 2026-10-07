@@ -46,28 +46,28 @@ A segmented, enterprise-style home lab built on **Proxmox VE** with a **pfSense*
 
 ### Topology
 
-```
-                      INTERNET
-                          │
-                   [Home router]
-                          │
-                  ┌───────┴────────┐
-                  │    Proxmox     │
-                  └───────┬────────┘
-                  WAN 192.168.1.5
-                  ┌───────┴────────┐
-                  │    pfSense     │
-                  └───────┬────────┘
-                          │  LAN trunk (VLAN-aware bridge in Proxmox)
-        ┌─────────────────┼──────────────────┐
-   VLAN 10 SERVERMGMT  VLAN 20 CLIENTS    VLAN 30 ADMIN
-   192.168.10.0/24     192.168.20.0/24    192.168.30.0/24
-   ┌──────────┐        ┌───────────┐      ┌────────────┐
-   │  DC01    │        │ Win10/11  │      │ Admin PC   │
-   │ AD·DNS·  │        │ clients   │      │ Kali (plan)│
-   │ DHCP     │        └───────────┘      └────────────┘
-   └──────────┘
-```
+                                     INTERNET
+                                         │
+                                  [ Home router ]
+                                         │
+┌────────────────────────────────────────┴───────────────────────────────┐
+│              PROXMOX VE HOST (all machines below are VMs)              │
+│              vmbr0 = WAN bridge  |  vmbr1 = VLAN-aware bridge          │
+│                                                                        │
+│                            ┌─────────────────┐                         │
+│                            │   pfSense (VM)  │                         │
+│                            │ WAN 192.168.1.5 │                         │
+│                            └────────┬────────┘                         │
+│                                     │  VLAN trunk                      │
+│           ┌─────────────────────────┴───────────────────────┐          │
+│           │                         │                       │          │
+│   VLAN 10 SERVERMGMT        VLAN 20 CLIENTS         VLAN 30 ADMIN      │
+│   192.168.10.0/24           192.168.20.0/24         192.168.30.0/24    │
+│   ┌──────────────┐          ┌──────────────┐        ┌──────────────┐   │
+│   │  DC01 (VM)   │          │ Win10/11 (VM)│        │ Admin PC (VM)│   │
+│   │ AD·DNS·DHCP  │          │   clients    │        │  Kali (VM)   │   │
+│   └──────────────┘          └──────────────┘        └──────────────┘   │
+└────────────────────────────────────────────────────────────────────────┘
 
 > 📷 *Replace this with an exported diagram (draw.io / diagrams.net) saved as `docs/network-diagram.png`.*
 
