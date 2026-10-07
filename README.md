@@ -46,30 +46,9 @@ A segmented, enterprise-style home lab built on **Proxmox VE** with a **pfSense*
 
 ### Topology
 
-                                     INTERNET
-                                         │
-                                  [ Home router ]
-                                         │
-┌────────────────────────────────────────┴───────────────────────────────┐
-│              PROXMOX VE HOST (all machines below are VMs)              │
-│              vmbr0 = WAN bridge  |  vmbr1 = VLAN-aware bridge          │
-│                                                                        │
-│                            ┌─────────────────┐                         │
-│                            │   pfSense (VM)  │                         │
-│                            │ WAN 192.168.1.5 │                         │
-│                            └────────┬────────┘                         │
-│                                     │  VLAN trunk                      │
-│           ┌─────────────────────────┴───────────────────────┐          │
-│           │                         │                       │          │
-│   VLAN 10 SERVERMGMT        VLAN 20 CLIENTS         VLAN 30 ADMIN      │
-│   192.168.10.0/24           192.168.20.0/24         192.168.30.0/24    │
-│   ┌──────────────┐          ┌──────────────┐        ┌──────────────┐   │
-│   │  DC01 (VM)   │          │ Win10/11 (VM)│        │ Admin PC (VM)│   │
-│   │ AD·DNS·DHCP  │          │   clients    │        │  Kali (VM)   │   │
-│   └──────────────┘          └──────────────┘        └──────────────┘   │
-└────────────────────────────────────────────────────────────────────────┘
+<img width="1408" height="768" alt="Gemini_Generated_Image_9smvyk9smvyk9smv" src="https://github.com/user-attachments/assets/3d2b3a8c-5793-4855-9f60-6a3c453de68e" />
 
-> 📷 *Replace this with an exported diagram (draw.io / diagrams.net) saved as `docs/network-diagram.png`.*
+
 
 ### Addressing
 
