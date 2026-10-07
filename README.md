@@ -149,7 +149,7 @@ Real problems encountered during the build and how they were solved:
 - [x] Reverse lookup zone and PTR records
 - [x] DHCP scopes and DHCP relay across VLANs
 - [x] Client receives address, gateway, and DNS from DHCP
-- [ ] Client joined to domain with domain user login
+- [x] Client joined to domain with domain user login
 - [ ] Admin workstation on VLAN 30
 - [ ] Tightened inter-VLAN firewall rules
 - [ ] Group Policy hardening
