@@ -46,7 +46,8 @@ A segmented, enterprise-style home lab built on **Proxmox VE** with a **pfSense*
 
 ### Topology
 
-<img width="1408" height="768" alt="Gemini_Generated_Image_9smvyk9smvyk9smv" src="https://github.com/user-attachments/assets/3d2b3a8c-5793-4855-9f60-6a3c453de68e" />
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/5c4221d7-8981-476e-a21c-401fa15c88c0" />
+
 
 
 
