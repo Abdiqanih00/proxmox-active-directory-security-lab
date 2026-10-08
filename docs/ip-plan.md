@@ -10,7 +10,8 @@
 ## Networks and VLANs
 | Network | VLAN | Subnet | Gateway (pfSense) | Purpose |
 |---|---|---|---|---|
-| WAN | n/a | 192.168.1.0/24 | Home router | Internet access, pfSense WAN = 192.168.1.5 |
+| WAN | n/a | 192.168.1.0/24 | Home router | Internet access, Proxmox VE WAN = 192.168.1.10 |
+| WAN | n/a | 192.168.1.0/24 | promox ve lan br | Internet access, pfSense WAN = 192.168.1.5 |
 | LAN | n/a | 192.168.100.0/24 | 192.168.100.1 | pfSense management network |
 | SERVERMGMT | 10 | 192.168.10.0/24 | 192.168.10.1 | Servers (static addresses) |
 | CLIENTS | 20 | 192.168.20.0/24 | 192.168.20.1 | User workstations |
